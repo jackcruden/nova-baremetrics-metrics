@@ -7,7 +7,9 @@ Display [Baremetrics](https://baremetrics.com) metrics on your Nova dashboard.
 ## Installation
 
 Install via Composer:
-    composer require jackcruden/nova-baremetrics-metrics
+```
+composer require jackcruden/nova-baremetrics-metrics
+```
 
 Register the card in `app/Providers/NovaServiceProvider` and pass the metric you'd like to show (MRR by default):
 ```php
