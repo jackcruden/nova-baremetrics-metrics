@@ -27,8 +27,8 @@ class Baremetrics
     {
         $response = $this->client->get($this->metric, [
             'query' => [
-                'start_date' => (new Carbon())->subMonths($months)->format('Y-m-d'),
-                'end_date'   => (new Carbon())->format('Y-m-d'),
+                'start_date' => Carbon::create()->subMonths($months)->setTimezone('UTC')->format('Y-m-d'),
+                'end_date'   => Carbon::create()->setTimezone('UTC')->format('Y-m-d'),
             ],
         ])->getBody()->getContents();
         $entries = json_decode($response)->metrics;
