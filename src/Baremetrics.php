@@ -85,7 +85,7 @@ class Baremetrics
             'revenue_churn'        => 'money',
             'trial_conversion'     => 'number',
             'upgrades'             => 'number',
-            'user_churn'           => 'number',
+            'user_churn'           => 'money',
         ];
 
         return $metricTypes[$this->metric];
